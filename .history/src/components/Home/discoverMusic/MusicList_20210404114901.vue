@@ -1,0 +1,39 @@
+<template>
+  <div>
+     <div class="gedanParent">
+       <a href="#">
+         <img src="../../../assets/images/jingpingedan.jpg" alt="">
+       </a>
+
+     </div> 
+  </div>  
+</template>
+
+<script>
+export default {
+ data(){
+   return {
+    
+   }
+ },
+ created(){
+    this.getJingpinMusicList();
+ },
+ methods:{
+     // 获取精品歌单
+     async getJingpinMusicList(){
+         const res = await this.$axios.get("/playlist/hot");
+         console.log(res)
+     }
+ }    
+}
+</script>
+
+<style lang="less" scoped>
+.gedanParent{
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+}
+</style>
