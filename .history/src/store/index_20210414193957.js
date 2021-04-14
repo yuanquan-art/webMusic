@@ -1,0 +1,19 @@
+import { createStore } from 'vuex'
+
+export default createStore({
+  state: {
+    // 搜索传递的歌曲名
+    songsName:"123",
+    // 获取点击歌曲时添加的歌曲列表
+    musiclist: []
+  },
+  mutations: {
+    updateSongsName(state,State){
+      state.songsName = State;
+    }
+  },
+  actions: {
+  },
+  modules: {
+  }
+})
