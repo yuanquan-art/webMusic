@@ -24,7 +24,14 @@ import
   ElSelect,
   ElementPlus,
   ElPagination,
-  ElAutocomplete
+  ElAutocomplete,
+  ElTable,
+  ElTableColumn,
+  ElCollapse,
+  ElCollapseItem,
+  ElSlider,
+  ElUpload,
+  ElDrawer
 } from 'element-plus';
 
 import App from './App.vue'
@@ -59,8 +66,16 @@ app.component(ElOption.name,ElOption);
 app.component(ElSelect.name,ElSelect);
 app.component(ElPagination.name,ElPagination);
 app.component(ElAutocomplete.name,ElAutocomplete);
+app.component(ElTable.name,ElTable);
+app.component(ElTableColumn.name,ElTableColumn);
+app.component(ElCollapse.name,ElCollapse);
+app.component(ElCollapseItem.name,ElCollapseItem);
+app.component(ElSlider.name,ElSlider);
+app.component(ElUpload.name,ElUpload);
+app.component(ElDrawer.name,ElDrawer);
 
 import axios from "axios";
 // axios.defaults.baseURL = 'http://localhost:3000/'
 app.config.globalProperties.$axios = axios;
+axios.defaults.withCredentials = true;
 app.use(store).use(router).use(ElementPlus).mount('#app')
